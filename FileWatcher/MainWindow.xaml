@@ -1,0 +1,288 @@
+﻿<Window x:Class="FileWatcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileWatcher"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="File Watcher" Height="700" Width="1200" Closed="Window_Closed">
+    <Border Padding="10">
+        <StackPanel>
+            
+            <!--OPTIONAL TODO: Internet Connection Popup Bar-->
+
+            <!--Path and browse for files-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="Path: " HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15"/>
+                <TextBox Grid.Column="1" x:Name="PathTextBox" Text="C:\" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15"/>
+                <Button Grid.Column="2" x:Name="BrowseButton" Click="BrowseButton_Click" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="100"/>
+            </Grid>
+
+            <!--Horizontal Line-->
+            <Rectangle  HorizontalAlignment="Stretch"  VerticalAlignment="Center" Fill="DarkCyan" Height="1" Margin="5 15 5 0"/>
+
+            <!--Monitoring filters-->
+            <Grid Margin="0 5 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Choose a filetype and other filter options-->
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+                    
+                    <!--Description-->
+                    <Label Content="Filters" FontSize="15" HorizontalAlignment="Center" Foreground="Blue" FontWeight="Bold"/>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="File Type: " HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <ComboBox Grid.Column="1" x:Name="FileTypeComboBox" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Width="100"/>
+                    </Grid>
+
+                    <!--File Changes Checkboxes-->
+                    <CheckBox x:Name="IncludeSubDirs" Content="Include Subdirectories" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15" Foreground="Red"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0" x:Name="Created" Content="Created" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="15"/>
+                        <CheckBox Grid.Column="1" x:Name="Renamed" Content="Renamed" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                    </Grid>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0" x:Name="Deleted" Content="Deleted" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                        <CheckBox Grid.Column="1" x:Name="Changed" Content="Changed" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                    </Grid>
+                </StackPanel>
+
+                <!--Vertical Line-->
+                <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black" Grid.Column="1"/>
+
+                <!--help/start/stop monitoring system-->
+                <StackPanel Grid.Column="2">
+
+                    <!--Description-->
+                    <Label Content="Start/Stop recording" HorizontalAlignment="Center" FontSize="15" Foreground="Blue" FontWeight="Bold"/>
+                    
+                    <Button x:Name="HelpButton" Click="HelpButton_Click" Content="Info?/Help?" FontSize="15" Width="300"/>
+                    <Label x:Name="Status" Content="STOP" HorizontalAlignment="Center" FontSize="20" Foreground="Red"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" x:Name="Start" Click="Start_Click" Content="Start" FontSize="15" Width="120"/>
+                        <Button Grid.Column="1" x:Name="Stop" Click="Stop_Click" Content="Stop" FontSize="15" Width="120"/>
+                    </Grid>
+                </StackPanel>
+
+                <!--Vertical Line-->
+                <Rectangle VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black" Grid.Column="3"/>
+
+                <!--Single scan report options-->
+                <StackPanel Grid.Column="4" Margin="0 0 30 0">
+
+                    <!--Description-->
+                    <Label Content="Single scan options" HorizontalAlignment="Center" Foreground="Blue" FontWeight="Bold" FontSize="15"/>
+
+                    <!--Source path label and textbox-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="Source:" HorizontalAlignment="Right" FontSize="15"/>
+                        <TextBox Grid.Column="1" x:Name="ReportSourcePathTextBox" Text="C:\" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15"/>
+                        <Button Grid.Column="2" x:Name="BrowseButton2" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Click="BrowseButton2_Click"/>
+                    </Grid>
+
+                    <!--Destination path label and textbox-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="Destination:" HorizontalAlignment="Right" FontSize="15"/>
+                        <TextBox Grid.Column="1" x:Name="ReportDestinationPathTextBox" Text="C:\" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="15"/>
+                        <Button Grid.Column="2" x:Name="BrowseButton3" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Click="BrowseButton3_Click"/>
+                    </Grid>
+
+                    <!--'Save To Database' checkbox and 'Create' button-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0" Checked="SaveToDatabaseCheckBox_Checked" Unchecked="SaveToDatabaseCheckBox_Unchecked"  x:Name="SaveToDatabaseCheckBox" Content="Save To Database" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                        <Button Grid.Column="1" x:Name="CreateReportButton" Click="CreateReportButton_Click" Content="Create a report" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <!--Horizontal Line-->
+            <Rectangle  HorizontalAlignment="Stretch"  VerticalAlignment="Center" Fill="DarkCyan" Height="1" Margin="5 5 5 0"/>
+
+            <!--Description-->
+            <Label Content="Data filters:" FontSize="15" FontWeight="Black" Margin="10 0 0 0"/>
+            
+            <!--Data filters-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--File operation filters-->
+                <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                    <Label Content="Operation type" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0" x:Name="DatabaseCreatedCheckbox" Content="Created" Margin="0 0 5 0" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="15" Click="DatabaseCreatedCheckbox_Click"/>
+                        <CheckBox Grid.Column="1" x:Name="DatabaseRenamedCheckbox" Content="Renamed" Margin="5 0 0 0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Click="DatabaseRenamedCheckbox_Click"/>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <CheckBox Grid.Column="0" x:Name="DatabaseDeletedCheckbox" Content="Deleted" Margin="0 0 5 0" HorizontalAlignment="Left"  VerticalAlignment="Center" FontSize="15" Click="DatabaseDeletedCheckbox_Click"/>
+                        <CheckBox Grid.Column="1" x:Name="DatabaseChangedCheckbox" Content="Changed" Margin="5 0 0 0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Click="DatabaseChangedCheckbox_Click"/>
+                    </Grid>
+                </StackPanel>
+
+                <!--Vertical Line-->
+                <Rectangle Grid.Column="1" VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black"/>
+
+                <!--Date filter options-->
+                <StackPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="Select time duration between two dates" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"/>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="From:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <DatePicker Grid.Column="1" x:Name="FromDatePickerBox" Width="120"/>
+                    </Grid>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Content="To:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        <DatePicker Grid.Column="1" x:Name="ToDatePickerBox" Width="120"/>
+                    </Grid>
+                    <Button x:Name="RefreshButton" Content="Select Date" FontSize="15" Click="RefreshButton_Click"/>
+                </StackPanel>
+
+                <!--Vertical Line-->
+                <Rectangle Grid.Column="3" VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black"/>
+
+                <!--Column filter checkboxes-->
+                <StackPanel Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="Database columns" HorizontalAlignment="Center" FontSize="15" FontWeight="Bold" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Margin="5">
+                            <CheckBox x:Name="OldFileNameColumn" Click="OldFileNameColumn_Click" Content="OldFileName" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15"/>
+                            <CheckBox x:Name="FileNameColumn" Content="FileName" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="FileNameColumn_Click"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Margin="5">
+                            <CheckBox x:Name="FilePathColumn" Content="FilePath" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="FilePathColumn_Click"/>
+                            <CheckBox x:Name="OldFilePathColumn" Content="OldFilePath" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="OldFilePathColumn_Click"/>
+                            
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="2" Margin="5">
+                            <CheckBox x:Name="CreationDateColumn" Content="CreationDate" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="CreationDateColumn_Click"/>
+                            <CheckBox x:Name="ChangeDateColumn" Content="ChangeDate" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="ChangeDateColumn_Click"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="3" Margin="5">
+                            <CheckBox x:Name="OperationColumn" Content="Operation" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="OperationColumn_Click"/>
+                            <CheckBox x:Name="FileExtensionColumn" Content="FileExtension" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="FileExtensionColumn_Click"/>
+                        </StackPanel>
+                        
+                        <StackPanel Grid.Column="4" Margin="5">
+                            <CheckBox x:Name="LastWriteColumn" Content="LastWrite" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="LastWriteColumn_Click"/>
+                            <CheckBox x:Name="LastAccessColumn" Content="LastAccess" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Click="LastAccessColumn_Click"/>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+
+            <!--Data grids-->
+            <TabControl Margin="10" SelectionChanged="TabControl_SelectionChanged">
+                <TabItem x:Name="MonitorLogsTabItem" Width="120" Height="30" Header="Monitoring Logs">
+                    <DataGrid Grid.Row="0" Grid.Column="0" x:Name="MonitoringDataGrid" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0 10 0 10"
+                      ScrollViewer.CanContentScroll="True"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      IsReadOnly="True"
+                      MaxHeight="250">
+                    </DataGrid>
+                </TabItem>
+                <TabItem x:Name="ScansTabItem" Width="120" Height="30" Header="Scans">
+                    <DataGrid Grid.Row="0" Grid.Column="0" x:Name="ScansDataGrid" 
+                      HorizontalAlignment="Center" VerticalAlignment="Top" 
+                      Margin="0 10 0 10"
+                      ScrollViewer.CanContentScroll="True"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      IsReadOnly="True"
+                      MaxHeight="250">
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+    </Border>
+</Window>

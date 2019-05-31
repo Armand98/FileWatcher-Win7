@@ -1,0 +1,71 @@
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\FileWatcher.exe.config
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\FileWatcher.pdb
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\HelpWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\MainWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\App.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher_MarkupCompile.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher_MarkupCompile.lref
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\HelpWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\MainWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.g.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.Properties.Resources.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.csproj.GenerateResource.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.csproj.CoreCompileInputs.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.pdb
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\EntityFramework.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher\FileWatcher\obj\Release\FileWatcher.csproj.CopyComplete
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.exe.config
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.pdb
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\HelpWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\MainWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\App.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher_MarkupCompile.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher_MarkupCompile.lref
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\HelpWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\MainWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.g.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.Properties.Resources.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.GenerateResource.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.CoreCompileInputs.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.CopyComplete
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.pdb
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csprojAssemblyReference.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.exe.config
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\FileWatcher.pdb
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csprojAssemblyReference.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\HelpWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\MainWindow.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\App.g.cs
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher_MarkupCompile.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher_MarkupCompile.lref
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\HelpWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\MainWindow.baml
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.g.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.Properties.Resources.resources
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.GenerateResource.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.CoreCompileInputs.cache
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.csproj.CopyComplete
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.exe
+C:\Users\Armand\Desktop\Visual Studio Projects\C#\Win7 - FileWatcher - Armand Pajor\FileWatcher\obj\Release\FileWatcher.pdb

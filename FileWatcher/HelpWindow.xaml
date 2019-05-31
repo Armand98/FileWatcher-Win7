@@ -1,0 +1,81 @@
+﻿<Window x:Class="FileWatcher.HelpWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileWatcher"
+        mc:Ignorable="d"
+        Title="HelpWindow" Height="450" Width="800">
+    <Border Padding="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Vertical Line-->
+            <Rectangle Grid.Column="1" VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black"/>
+
+            <StackPanel Grid.Column="0">
+                <Label Content="Opis programu" HorizontalAlignment="Center" FontSize="15" FontWeight="Black"/>
+                
+                <!--Horizontal Line-->
+                <Rectangle  HorizontalAlignment="Stretch"  VerticalAlignment="Center" Fill="DarkCyan" Height="1" Margin="0 0 0 0"/>
+
+                <TextBlock Padding="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontSize="14">
+                    Program służy do monitorowania zmian zachodzących w plikach 
+                    i folderach w podanym przez użytkownika katalogu.
+                    <LineBreak/><LineBreak/>
+                    Każda zmiana zostanie zarejestrowana i zapisana w logu.
+                    <LineBreak/><LineBreak/>
+                    Logi z monitoringu będą automatycznie zapisywane na serwerze. 
+                    W przypadku braku połączenia z Internetem, logi będą zapisywane na 
+                    lokalnym komputerze w domyślnym katalogu w postaci plików .txt.
+                    <LineBreak/><LineBreak/>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Grid.Column="2">
+                <Label Content="Opis filtrów" HorizontalAlignment="Center" FontSize="15" FontWeight="Black"/>
+                
+                <!--Horizontal Line-->
+                <Rectangle  HorizontalAlignment="Stretch"  VerticalAlignment="Center" Fill="DarkCyan" Height="1" Margin="0 0 0 0"/>
+
+                <TextBlock Padding="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontSize="14">
+                    Filtry służą do sprecydowania, zmiany których plików mają być rejestrowane.
+                    <LineBreak/><LineBreak/>
+                    Filtr dotyczący podkatalogów pozwala na monitorowanie zawartości wszystkich podfolderów w jednym momencie.
+                    <LineBreak/>
+                    <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Foreground="Red">
+                        Należy go używać rozsądnie, gdyż monitorowanie całego dysku np. C: może spowodować wygenerowanie
+                    ogromnej ilości niechcianych wpisów!
+                    </TextBlock>
+                </TextBlock>
+            </StackPanel>
+
+            <!--Vertical Line-->
+            <Rectangle Grid.Column="3" VerticalAlignment="Stretch" Width="1" Margin="2" Stroke="Black"/>
+
+            <StackPanel Grid.Column="4">
+                <Label Content="Zapis pojedynczych skanów" HorizontalAlignment="Center" FontSize="15" FontWeight="Black"/>
+
+                <!--Horizontal Line-->
+                <Rectangle  HorizontalAlignment="Stretch"  VerticalAlignment="Center" Fill="DarkCyan" Height="1" Margin="0 0 0 0"/>
+
+                <TextBlock Padding="5" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontSize="14">
+                    Pojedyncze skany służą do odczytu informacji o istniejących plikach i folderach.
+                    <LineBreak/><LineBreak/>
+                    Każdy log otrzymuje unikatową nazwę na którą składa się data i czas jego utworzenia.
+                    <LineBreak/><LineBreak/>
+                    Przed skanowaniem należy wybrać ścieżkę katalogu docelowego, który zostanie przeskanowany,
+                    oraz ścieżkę katalogu docelowego, w którym zostanie utworzony log.
+                    <LineBreak/>
+                    Istnieje możliwość zapisu logów na serwerze po wcześniejszym zaznaczeniu tej opcji.
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
